@@ -1,7 +1,10 @@
+@import (reference) "css/components-shared";
+
 .button-1
 {
+    .components-shared();
+
     display: inline-block;
-    font-family: "pt sans";
     font-weight: 600;
     background: #bc4b4b;
     color: white;
@@ -14,6 +17,10 @@
     border: 1px solid black;
     cursor: pointer;
     user-select: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 
     &:hover
     {

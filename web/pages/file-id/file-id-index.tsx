@@ -1,6 +1,6 @@
 import {createRoot} from "react-dom/client";
 import {useState,useEffect} from "react";
-import {useMutation,QueryClientProvider,QueryClient} from "@tanstack/react-query";
+import {useMutation,QueryClientProvider,QueryClient,useQuery,useQueryClient} from "@tanstack/react-query";
 
 import {SearchBar} from "components/search-bar/search-bar";
 import {TargetFileList} from "components/target-file-list/target-file-list";
@@ -15,9 +15,9 @@ import "./file-id-index.less";
 function FileIdIndex():JSX.Element
 {
   const getMp3sQuery=useMutation({
+    networkMode:"always",
     async mutationFn(searchPath:string):Promise<TargetItem[]>
     {
-      console.log("doing");
       return ifmItemsToTargetItems(await searchMp3(searchPath,false));
     },
 
@@ -36,7 +36,6 @@ function FileIdIndex():JSX.Element
   }
 
   return <>
-    <p>{getMp3sQuery.status}</p>
     <section className="title-zone">
       <h1>File ID</h1>
       <h2>Select files to be processed</h2>

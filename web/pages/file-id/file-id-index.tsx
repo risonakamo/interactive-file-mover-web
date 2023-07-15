@@ -13,10 +13,6 @@ function FileIdIndex():JSX.Element
 {
   const [selectedItems,setSelectedItems]=useState<TargetItem[]>([]);
 
-  useEffect(()=>{
-    searchMp3("huh",false);
-  },[]);
-
   return <>
     <section className="title-zone">
       <h1>File ID</h1>

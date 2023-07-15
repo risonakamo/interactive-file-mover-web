@@ -7,3 +7,14 @@ export function groupTargetItems(items:TargetItem[]):GroupedTargetItems
         return item.folder;
     });
 }
+
+/** convert ifm target items to our target item */
+export function IfmItemsToTargetItems(items:IfmTargetItem[]):TargetItem[]
+{
+    return _.map(items,(item:IfmTargetItem):TargetItem=>{
+        return {
+            folder:item.parent,
+            name:item.itemName
+        };
+    });
+}

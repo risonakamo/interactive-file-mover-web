@@ -18,3 +18,14 @@ export function ifmItemsToTargetItems(items:IfmTargetItem[]):TargetItem[]
         };
     });
 }
+
+/** count target items into target items count obj */
+export function countTargetItems(items:TargetItem[]):TargetItemsCount
+{
+    return {
+        folders:_.keys(_.countBy(items,(item:TargetItem):string=>{
+            return item.folder;
+        })).length,
+        items:items.length
+    };
+}

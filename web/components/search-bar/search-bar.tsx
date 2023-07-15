@@ -26,8 +26,24 @@ export function SearchBar(props:SearchBarProps):JSX.Element
     props.onSubmit(inputElement.current?.value);
   }
 
+  /** keypress of input also triggers submit */
+  function h_key(e:React.KeyboardEvent):void
+  {
+    if (e.key!="Enter")
+    {
+      return;
+    }
+
+    if (!inputElement.current?.value)
+    {
+      return;
+    }
+
+    props.onSubmit(inputElement.current?.value);
+  }
+
   return <div className="search-bar">
-    <input type="text" placeholder={props.placeholder} ref={inputElement}/>
+    <input type="text" placeholder={props.placeholder} ref={inputElement} onKeyDown={h_key}/>
     <Button1 text="Search" onClick={h_buttonClick}/>
   </div>;
 }

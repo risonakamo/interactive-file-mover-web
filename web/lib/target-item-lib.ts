@@ -9,7 +9,7 @@ export function groupTargetItems(items:TargetItem[]):GroupedTargetItems
 }
 
 /** convert ifm target items to our target item */
-export function IfmItemsToTargetItems(items:IfmTargetItem[]):TargetItem[]
+export function ifmItemsToTargetItems(items:IfmTargetItem[]):TargetItem[]
 {
     return _.map(items,(item:IfmTargetItem):TargetItem=>{
         return {

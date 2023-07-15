@@ -1,5 +1,5 @@
 /** use backend to search for mp3s */
-export async function searchMp3(searchPath:string,includeMaybe:boolean):Promise<IfmTargetItem>
+export async function searchMp3(searchPath:string,includeMaybe:boolean):Promise<IfmTargetItem[]>
 {
     const request:SearchMp3Request={
         searchPath,

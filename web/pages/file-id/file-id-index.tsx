@@ -75,8 +75,12 @@ function FileIdIndex():JSX.Element
     </section>
 
     <section className="button-zone">
-      <p>{searchStatusText}</p>
-      <Button1 text="Submit"/>
+      <div className="left">
+        <p>{searchStatusText}</p>
+      </div>
+      <div className="right">
+        <Button1 text="Submit"/>
+      </div>
     </section>
   </>;
 }

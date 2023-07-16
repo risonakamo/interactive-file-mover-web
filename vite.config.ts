@@ -39,7 +39,8 @@ export default defineConfig({
 
         rollupOptions:{
             input:{
-                fileId:`${__dirname}/web/html/file-id/index.html`
+                fileId:`${__dirname}/web/html/file-id/index.html`,
+                fileTag:`${__dirname}/web/html/file-tag/index.html`
             }
         }
     }

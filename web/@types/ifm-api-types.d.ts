@@ -13,3 +13,9 @@ interface IfmTargetItem
     parent:string
     itemName:string
 }
+
+/** request to submit items */
+interface SubmitItemsRequest
+{
+    items:IfmTargetItem[]
+}

@@ -1,6 +1,7 @@
 import {createRoot} from "react-dom/client";
 import {useState,useEffect} from "react";
-import {useMutation,QueryClientProvider,QueryClient,useQuery,useQueryClient} from "@tanstack/react-query";
+import {useMutation,QueryClientProvider,QueryClient,
+  useQuery,useQueryClient} from "@tanstack/react-query";
 import pluralize from "pluralize";
 
 import {SearchBar} from "components/search-bar/search-bar";

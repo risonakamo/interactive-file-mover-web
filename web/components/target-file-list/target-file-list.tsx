@@ -26,7 +26,28 @@ export function TargetFileList(props:TargetFileListProps):JSX.Element
     });
   }
 
+  /** render when there are no items */
+  function r_noItems():JSX.Element
+  {
+    return <div className="no-items">
+      No Results
+    </div>;
+  }
+
+  /** conditional selection of what to render */
+  function r_conditionalInterior():JSX.Element
+  {
+    if (props.items.length)
+    {
+      return <>
+        {r_itemSections()}
+      </>;
+    }
+
+    return r_noItems();
+  }
+
   return <div className="target-file-list">
-    {r_itemSections()}
+    {r_conditionalInterior()}
   </div>;
 }

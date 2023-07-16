@@ -3,4 +3,53 @@
 .mp3-info
 {
     .components-shared();
+
+    width: 800px;
+
+    .top
+    {
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+
+        .img-zone
+        {
+            width: 200px;
+
+            img
+            {
+                width: 100%;
+            }
+        }
+
+        .details
+        {
+            flex: 1;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1
+            {
+                font-weight: 400;
+                font-size: 27px;
+                margin-bottom: 10px;
+            }
+
+            h2
+            {
+                font-weight: 400;
+                font-size: 18px;
+                color: @main-grey;
+            }
+
+            h3
+            {
+                font-weight: 400;
+                font-size: 17px;
+                color: @main-highlight;
+            }
+        }
+    }
 }
